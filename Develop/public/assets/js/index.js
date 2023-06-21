@@ -1,8 +1,8 @@
-let noteTitle;
-let noteText;
-let saveNoteBtn;
-let newNoteBtn;
-let noteList;
+let noteTitle = undefined;
+let noteText = undefined;
+let saveNoteBtn = undefined;
+let newNoteBtn = undefined;
+let noteList = undefined; 
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
@@ -53,6 +53,7 @@ const deleteNote = (id) =>
 const renderActiveNote = () => {
   hide(saveNoteBtn);
 
+  // checking if an active note id is not undefined
   if (activeNote.id) {
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
